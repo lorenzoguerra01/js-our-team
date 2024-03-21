@@ -79,7 +79,7 @@ function generateBoxes(numBoxes, boxInRow, text) {
     return container;
 }
 function isRandomImage(x, y, alt) {
-    let image = `<img src="https://picsum.photos/${x}/${y}" alt="img-${alt}"></img>`;
+    let image = `<img src="https://picsum.photos/${x}/${y}?random=${getRndInteger(1, 10000)}" alt="img-${alt}"></img>`;
     return image;
 }
 // global variables 
