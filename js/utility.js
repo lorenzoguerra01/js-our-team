@@ -78,6 +78,10 @@ function generateBoxes(numBoxes, boxInRow, text) {
     }
     return container;
 }
+function isRandomImage(x, y, alt) {
+    let image = `<img src="https://picsum.photos/${x}/${y}" alt="img-${alt}"></img>`;
+    return image;
+}
 // global variables 
 
 let reply = document.getElementById("reply");

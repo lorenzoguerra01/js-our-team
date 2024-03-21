@@ -81,7 +81,7 @@ elBtnSubmit.addEventListener("click", (e) => {
         card.classList.add("card", "p-3", "text-center")
         card.style.width = `calc(100% / 3 - 15px)`;
         if (newMember.image === "") {
-            card.innerHTML = ` <img src=" https://picsum.photos/400/400" alt="img-member"></img>`
+            card.innerHTML = isRandomImage(1000, 1000, "member")
         } else {
             card.innerHTML = `<img src="img/${newMember.image}">`
         }
