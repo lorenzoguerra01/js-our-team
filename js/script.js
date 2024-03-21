@@ -57,3 +57,39 @@ for (let i = 0; i < members.length; i++) {
     `;
     reply.appendChild(card);
 }
+
+let elBtnSubmit = document.getElementById("submit")
+
+elBtnSubmit.addEventListener("click", (e) => {
+    e.preventDefault();
+    const photoVal = document.getElementById('photo').value;
+    const nameVal = document.getElementById('name').value;
+    const roleVal = document.getElementById('role').value;
+
+    const newMember = {
+        image: photoVal,
+        name: nameVal,
+        role: roleVal
+    };
+    let error = document.getElementById("error")
+    if (nameVal === "" || roleVal === "") {
+        error.classList.remove("d-none")
+    } else {
+        members.push(newMember);
+        console.log(members);
+        const card = document.createElement('div');
+        card.classList.add("card", "p-3", "text-center")
+        card.style.width = `calc(100% / 3 - 15px)`;
+        if (newMember.image === "") {
+            card.innerHTML = ` <img src=" https://picsum.photos/400/400" alt="img-member"></img>`
+        } else {
+            card.innerHTML = `<img src="img/${newMember.image}">`
+        }
+        card.innerHTML += `
+            <div class = "fw-bold">${newMember.name}</div>
+            <div>${newMember.role}</div>
+            `;
+        reply.appendChild(card);
+        error.classList.add("d-none")
+    }
+})
