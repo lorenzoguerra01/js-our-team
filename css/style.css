@@ -48,6 +48,7 @@ a {
 .ms_card {
     height: 80vh !important;
     width: 80%;
+    flex-direction: row !important;
     overflow: auto;
 }
 .ms_box {

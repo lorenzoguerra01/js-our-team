@@ -80,4 +80,4 @@ function generateBoxes(numBoxes, boxInRow, text) {
 }
 // global variables 
 
-let reply = document.querySelector(".reply");
+let reply = document.getElementById("reply");

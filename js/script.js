@@ -46,15 +46,13 @@ const members = [
     },
 ];
 
-const reply = document.getElementById("reply")
-
 for (let i = 0; i < members.length; i++) {
     const card = document.createElement('div');
     card.classList.add("card", "p-3", "text-center")
-    card.style.width = `calc(100% / 3})`;
+    card.style.width = `calc(100% / 3)`;
     card.innerHTML = `
     <img src="img/${members[i].image}">
-    <div>${members[i].name}</div>
+    <div class = "fw-bold">${members[i].name}</div>
     <div>${members[i].role}</div>
     `;
     reply.appendChild(card);
