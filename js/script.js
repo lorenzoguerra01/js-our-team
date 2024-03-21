@@ -49,7 +49,7 @@ const members = [
 for (let i = 0; i < members.length; i++) {
     const card = document.createElement('div');
     card.classList.add("card", "p-3", "text-center")
-    card.style.width = `calc(100% / 3)`;
+    card.style.width = `calc(100% / 3 - 15px)`;
     card.innerHTML = `
     <img src="img/${members[i].image}">
     <div class = "fw-bold">${members[i].name}</div>
